@@ -20,7 +20,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --colors --watchAll=true",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",          
+      "!src/serviceWorker.js", 
+      "!src/setupTests.js"       
+    ],
+    "coverageReporters": ["text", "lcov", "html"]
   },
   "eslintConfig": {
     "extends": [
